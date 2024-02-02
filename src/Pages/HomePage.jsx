@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import './homePage.css';
 
 // Import the config file
-import config from '../config';
+import config from '../Config';
 
 // Define the main component for the home page
 function HomePage({ user, handleNewChatUserIdUpdate }) {
