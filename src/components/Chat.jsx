@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import "./chat.css";
+import "./Chat.css";
 import addIcon from "../assets/add.png";
 import sendIcon from "../assets/send.png";
 import noMessages from "../assets/no-messages.png";
