@@ -1,6 +1,6 @@
 
 // Importing necessary components and styles
-import Navbar from '../components/navbar';
+import Navbar from '../components/Navbar';
 import Chat from '../components/Chat'
 import Footer from '../components/Footer';
 import './chatPage.css';
