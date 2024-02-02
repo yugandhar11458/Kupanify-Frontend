@@ -2,7 +2,7 @@
 // Import necessary dependencies and components
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import Navbar from '../components/navbar';
+import Navbar from '../components/Navbar';
 import CouponList from '../components/CouponList';
 import Footer from '../components/Footer';
 import './homePage.css';
