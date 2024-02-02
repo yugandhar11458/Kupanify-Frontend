@@ -27,9 +27,6 @@ import config from './config';
 // Main App component
 function App() {
 
-  // Backend Ip Address
-  const backendIpAddress = '127.0.0.1:8000';
-
   // State variables to manage user information, loading state, and selected chat user
   const [user, setUser] = useState({
     userId: null,
