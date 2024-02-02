@@ -8,7 +8,7 @@ import noMessages from "../assets/no-messages.png";
 import tickIcon from "../assets/tick.png";
 
 // Import the config file
-import config from '../config';
+import config from '../Config';
 
 // Chat component receives user details, new chat user ID, and a function to update new selected chat user ID
 function Chat({ user, handleNewChatUserIdUpdate, newSelectedChatUserId }) {
