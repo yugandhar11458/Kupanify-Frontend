@@ -13,7 +13,7 @@ import chatIcon from "../assets/chat.svg";
 import "./profilePage.css";
 
 // Import the config file
-import config from '../config';
+import config from '../Config';
 
 // Functional component representing the user's profile page
 function ProfilePage({ user, handleSignOut }) {
