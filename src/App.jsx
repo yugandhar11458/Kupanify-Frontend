@@ -22,7 +22,7 @@ import ChatPage from "./Pages/ChatPage";
 import './App.css';
 
 // Import the config file
-import config from './config';
+import config from './Config';
 
 // Main App component
 function App() {
