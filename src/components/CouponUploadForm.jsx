@@ -4,7 +4,7 @@ import axios from 'axios';
 import './couponUploadForm.css';
 
 // Import the config file
-import config from '../config';
+import config from '../Config';
 
 function CouponUploadForm(props) {
 
