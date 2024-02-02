@@ -9,8 +9,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 // Import authentication functions and Firebase instance
-import { auth } from "./firebase";
-import { signInWithGoogle, signOutUser } from "./firebase";
+import { auth } from "./Firebase";
+import { signInWithGoogle, signOutUser } from "./Firebase";
 
 // Import pages/components used in the application
 import LoginPage from "./Pages/LoginPage";
