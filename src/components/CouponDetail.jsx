@@ -6,7 +6,7 @@ import './couponDetail.css';
 import copyIcon from '../assets/copy.svg';
 
 // Import the config file
-import config from '../config';
+import config from '../Config';
 
 // Main component for displaying detailed coupon information
 function CouponDetail({ coupon, handleCouponDetailCloseClick, couponsType, refetchProfilePageCoupons, user, refetchHomePageCoupons, handleNewChatUserIdUpdate }) {
