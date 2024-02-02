@@ -1,0 +1,12 @@
+.homepage{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.main-content {
+    min-height: 80vh;
+}
+
+.homepage-search-coupons-text {
+    text-align: center;
+}

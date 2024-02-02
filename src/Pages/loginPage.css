@@ -1,0 +1,67 @@
+.loginpage {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginpage-left {
+    margin-right: 4rem;
+}
+
+.loginpage-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginpage-main-quote {
+    margin-bottom: 8px;
+}
+
+.loginpage-sub-quote {
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 2rem;
+}
+
+.login-btn {
+    width: 25rem;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: #b2c2ab;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    color: #000;
+}
+
+
+@media (max-width: 1200px) {
+    .loginpage {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loginpage-left {
+        margin-right: 0px;
+    }
+
+    .login-btn {
+        font-size: 1rem;
+        width: 20rem;
+        font-size: 1.2rem;
+    }
+
+    .coupon-sharing-img {
+        width: 300px;
+    }
+
+    .kupanify-logo {
+        height: 100px;
+    }
+
+}

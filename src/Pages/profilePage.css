@@ -1,0 +1,120 @@
+.profilepage{
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+.profile-page-upload {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 1rem;
+}
+
+.profile-page-upload-quote {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.profile-page-upload-coupon {
+    width: 25rem;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: #b2c2ab;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+.profile-page-chat-and-logout-btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-page-chat-button {
+    max-width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: #b2c2ab;
+    height: 50px;
+    margin: 2rem 0px;
+}
+
+.chat-btn-icon {
+    width: 20%;
+}
+
+.profile-page-logout-button {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    background-color: #b2c2ab;
+    height: 50px;
+    margin: 2rem 0px;
+}
+
+.profile-page-availed-coupons, .profile-page-uploaded-coupons {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0px;
+}
+
+
+@media (max-width: 1110px) {
+
+    .profile-page-upload {
+        flex-direction: column;
+    }
+
+    .profile-page-upload-quote {
+        font-size: 1.5rem;
+    }
+
+    .profile-page-upload-coupon {
+        font-size: 1rem;
+        width: 15rem;
+        font-size: 1.2rem;
+        margin-right: 0px;
+    }
+
+    .profile-page-chat-button {
+        max-width: 100px;
+        height: 30px;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        margin: 1rem 0px;
+    }
+
+    .profile-page-logout-button {
+        max-width: 100px;
+        height: 30px;
+        font-size: 1rem;
+        border-radius: 0.5rem;
+        margin: 1rem 0px;
+    }
+
+    .profile-page-availed-coupons, .profile-page-uploaded-coupons {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+}

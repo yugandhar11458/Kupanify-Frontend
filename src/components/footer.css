@@ -1,0 +1,22 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    padding: 0px 1rem;
+    border-top: 2px solid #000;
+    margin: 0px auto;
+}
+
+.footer-contact-email, .footer-copyrights {
+    margin: 1rem 0px;
+    font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+    .footer-contact-email, .footer-copyrights {
+        margin: 0.5rem 0px;
+        font-size: 0.7rem;
+    }
+}
+

@@ -1,0 +1,159 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  padding: 0px 1rem;
+  border-bottom: 2px solid #000;
+  margin: 0px auto;
+}
+
+.logo {
+  margin: 0px 1rem;
+}
+
+.logo-title {
+  height: 100px;
+}
+
+.search-bar>[type='text'] {
+  padding: 0.4rem;
+  border: none;
+  outline: none;
+  max-width: 350px;
+  min-width: 20px;
+  height: 0.4rem;
+  background-color: #fff;
+}
+
+.search-bar {
+  background-color: #fff;
+  max-width: 430px;
+  min-width: 50px;
+  height: 38px;
+  border-radius: 1.5rem;
+  padding: 0px 1.5rem;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 1rem;
+}
+
+.search-bar-input-field {
+  font-size: 1.2rem;
+}
+
+.search-bar-search-icon {
+  height: 1.8rem;
+}
+
+select {
+  min-width: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('../assets/chevron_down.svg');
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  background-size: 1.5rem;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 1.5rem;
+  outline: none;
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 0px 1rem;
+  padding-right: 2.2rem;
+  margin: 0px 1rem;
+}
+
+.profile {
+  width: 12rem;
+  height: 40px;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  margin: 0px 1rem;
+  color: #304D30;
+}
+
+.profile-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: italic;
+  margin: 0px auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 8px;
+}
+
+.profile-image {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  padding-right: 0.3rem;
+}
+
+@media (max-width: 767px) {
+
+  .navbar {
+    padding: 0px;
+  }
+
+  .logo {
+    margin: 0px 0.3rem;
+  }
+
+  .logo-title {
+    height: 45px;
+  }
+
+  .search-bar {
+    height: 23px;
+    padding: 0px 0.5rem;
+    margin: 0px 0.3rem;
+  }
+
+  .search-bar-input-field {
+    font-size: 1.0rem;
+  }
+
+  .search-bar-search-icon {
+    height: 1.2rem;
+  }
+
+  select {
+    padding: 0px 0.5rem;
+    padding-right: 1.5rem;
+    font-size: 1.0rem;
+    height: 25px;
+    margin: 0px 0.3rem;
+  }
+
+  .profile {
+    min-width: 0rem;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0.3rem;
+  }
+
+
+  .profile-name {
+    display: none;
+    padding-left: 0px;
+  }
+
+  .profile-image {
+    width: 1.3rem;
+    height: 1.3rem;
+    padding-right: 0px;
+  }
+
+}
