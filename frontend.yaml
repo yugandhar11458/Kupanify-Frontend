@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  frontend:
+    image: frontend:latest
+    ports:
+      - "4000:3000"
+    networks:
+      - frontend-network
+     
+    restart: always
+networks:
+  frontend-network:
+    name: supra-link
+    external: true
