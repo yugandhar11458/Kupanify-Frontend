@@ -5,12 +5,7 @@ import {
   RouterProvider,
   Navigate,
 } from "react-router-dom";
-import { useState, useEffect } from "react";
-import axios from "axios";
-
-// Import authentication functions and Firebase instance
-import { auth } from "./Firebase";
-import { signInWithGoogle, signOutUser } from "./Firebase";
+import { useState } from "react";
 
 // Import pages/components used in the application
 import LoginPage from "./Pages/LoginPage";
@@ -21,8 +16,6 @@ import ChatPage from "./Pages/ChatPage";
 // Import the stylesheet for the App
 import './App.css';
 
-// Import the config file
-import config from './Config';
 
 // Main App component
 function App() {
@@ -34,63 +27,13 @@ function App() {
     userImage: null,
   });
   const [newSelectedChatUserId, setNewSelectedChatUserId] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Function to update the selected chat user
   const handleNewChatUserIdUpdate = (newChatUserId) => {
     setNewSelectedChatUserId(newChatUserId);
   };
 
-  // Function to handle Google sign-in
-  const handleSignInWithGoogle = async () => {
-    const signedInUser = await signInWithGoogle();
-
-    if (signedInUser) {
-      // Post user data to the backend after successful Google sign-in
-      await axios.post(
-        `${config.backendIpAddress}/api/user-profiles/`,
-        signedInUser
-      );
-
-      // Update user state with signed-in user information
-      setUser({
-        userId: signedInUser.userId,
-        userName: signedInUser.userName,
-        userImage: signedInUser.userImage,
-      });
-    }
-  };
-
-  // Function to handle user sign-out
-  const handleSignOut = async () => {
-    await signOutUser();
-    // Reset user state on sign-out
-    setUser({ userId: null, userName: null, userImage: null });
-  };
-
-  // useEffect to listen for changes in user authentication state
-  useEffect(() => {
-    // Subscribe to authentication state changes
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user) {
-        // User is signed in
-        const updatedUser = {
-          userId: user.uid,
-          userName: user.displayName,
-          userImage: user.photoURL,
-        };
-        setUser(updatedUser);
-        setIsLoading(false);
-      } else {
-        // User is signed out
-        setUser({ userId: null, userName: null, userImage: null });
-        setIsLoading(false);
-      }
-    });
-
-    // Unsubscribe when component unmounts
-    return () => unsubscribe();
-  }, []);
 
 // If the app is still loading, display a loader
 if (isLoading) {
@@ -110,7 +53,7 @@ if (isLoading) {
         <Navigate to="/home" />
       ) : (
         // If user is not authenticated, display the login page
-        <LoginPage handleSignInWithGoogle={handleSignInWithGoogle} />
+        <LoginPage setUser={setUser} />
       ),
     },
     {
@@ -130,7 +73,7 @@ if (isLoading) {
       path: "/profile",
       element: user.userId ? (
         // If user is authenticated, display the profile page
-        <ProfilePage user={user} handleSignOut={handleSignOut} />
+        <ProfilePage user={user} setUser={setUser}/>
       ) : (
         // If user is not authenticated, redirect to login
         <Navigate to="/login" />

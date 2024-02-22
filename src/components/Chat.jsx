@@ -186,7 +186,7 @@ function Chat({ user, handleNewChatUserIdUpdate, newSelectedChatUserId }) {
                     onClick={() => handleUserClick(chatUser)}
                   >
                     <img
-                      src={chatUser.userImage}
+                      src={`${config.backendIpAddress}${chatUser.userImage}`}
                       alt=""
                       className="chat-user-profile-image"
                       referrerPolicy="no-referrer"
@@ -203,7 +203,7 @@ function Chat({ user, handleNewChatUserIdUpdate, newSelectedChatUserId }) {
                     {/* Display selected user's profile */}
                     <div className="chat-user-profile-top-bar">
                       <img
-                        src={selectedUser.userImage}
+                        src={`${config.backendIpAddress}${selectedUser?.userImage}`}
                         alt=""
                         className="chat-user-profile-image"
                       />

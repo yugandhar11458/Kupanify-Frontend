@@ -16,7 +16,7 @@ import "./profilePage.css";
 import config from '../Config';
 
 // Functional component representing the user's profile page
-function ProfilePage({ user, handleSignOut }) {
+function ProfilePage({ user, setUser }) {
   // State variables to manage the state of the upload coupon form and coupon data
   const [isUploadCouponFormClicked, setIsUploadCouponFormClicked] =
     useState(false);
@@ -111,7 +111,7 @@ function ProfilePage({ user, handleSignOut }) {
           </Link>
           <Link
             to="/login"
-            onClick={handleSignOut}
+            onClick={() => setUser(({}))}
             style={{ textDecoration: "none", color: "inherit" }}
             className="profile-page-logout-button"
           >

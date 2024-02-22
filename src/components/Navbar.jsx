@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 import "./navbar.css";
 import searchIcon from "../assets/search.svg";
 import logo from "../assets/logo.png";
+import config from '../Config';
 
 // Navbar component with props for various functionalities
 function Navbar(props) {
 
+  console.log("Navbar",props.user);
   // State to manage the search input value
   const [searchValue, setSearchValue] = useState('');
 
@@ -87,7 +89,7 @@ function Navbar(props) {
           <p className="profile-name">{props.user.userName}</p>
           <img
             className="profile-image"
-            src={props.user.userImage}
+            src={`${config.backendIpAddress}${props.user.userProfileImage}`}
             alt="profile-image"
             referrerPolicy="no-referrer"
           />
