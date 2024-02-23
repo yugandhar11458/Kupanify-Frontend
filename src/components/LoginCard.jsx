@@ -29,7 +29,7 @@ function LoginCard({ setIsLoginCardOpened, setUser }) {
                 console.log("Login failed. Please try again.");
             }
         } catch (error) {
-            if (error.response && (error.response.status === 400 || error.response.status === 401)) {
+            if (error.response && (error.response.status === 404 || error.response.status === 401)) {
                 alert("Invalid email or password. Please try again.");
             } else {
                 console.log(error);
