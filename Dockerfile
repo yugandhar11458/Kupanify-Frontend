@@ -3,7 +3,7 @@ WORKDIR /app
 COPY package*.json ./ 
 RUN npm install 
 COPY . . 
-ENV VITE_REACT_APP_BACKEND_URL=http://3.109.56.140:8000
+ENV VITE_REACT_APP_BACKEND_URL=http://13.201.4.234:8000
 RUN npm run build 
 RUN npm install -g serve 
 EXPOSE 3000 
