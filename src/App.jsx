@@ -27,22 +27,12 @@ function App() {
     userImage: null,
   });
   const [newSelectedChatUserId, setNewSelectedChatUserId] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
 
   // Function to update the selected chat user
   const handleNewChatUserIdUpdate = (newChatUserId) => {
     setNewSelectedChatUserId(newChatUserId);
   };
 
-
-// If the app is still loading, display a loader
-if (isLoading) {
-  return (
-    <div className="loader-container">
-      <div className="loader"></div>
-    </div>
-  );
-}
 
   // Create the router configuration based on user authentication status
   const router = createBrowserRouter([
@@ -106,11 +96,6 @@ if (isLoading) {
 
   // Wrap the JSX with RouterProvider and return the component
   return <RouterProvider router={router}>{/* other JSX */}</RouterProvider>;
-}
-
-// Placeholder Layout component, replace with the actual layout if needed
-function Layout() {
-  return <Layout />;
 }
 
 // Export the main App component as the default export
